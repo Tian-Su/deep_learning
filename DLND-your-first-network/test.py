@@ -1,6 +1,8 @@
 %matplotlib inline
 %config InlineBackend.figure_format = 'retina'
 
+import sys
+sys.path.append('/Users/tiansu/Documents/git/deep_learning/DLND-your-first-network')
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -12,7 +14,7 @@ def MSE(y, Y):
 
 
 
-data_path = '/Users/ikt306/Downloads/DLND-your-first-network/Bike-Sharing-Dataset/hour.csv'
+data_path = '/Users/tiansu/Documents/git/deep_learning/DLND-your-first-network/Bike-Sharing-Dataset/hour.csv'
 
 rides = pd.read_csv(data_path)
 
@@ -49,9 +51,9 @@ val_features, val_targets = features[-60*24:], targets[-60*24:]
 
 ### Set the hyperparameters here ###
 reload(nn)
-epochs = 1
+epochs = 1000
 learning_rate = 0.1
-hidden_nodes = 3
+hidden_nodes = 2
 output_nodes = 1
 
 N_i = train_features.shape[1]
